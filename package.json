@@ -1,49 +1,40 @@
 {
-  "name": "Kasa",
-  "version": "0.0.1",
+  "name": "kasa",
+  "version": "0.1.0",
   "private": true,
-  "description": "",
-  "homepage": "https://github.com/zhdanove59/Kasa#readme",
-  "bugs": {
-    "url": "https://github.com/zhdanove59/Kasa/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zhdanove59/Kasa.git"
-  },
-  "workspaces": [
-    "client",
-    "server"
-  ],
-  "scripts": {
-    "postinstall": "husky install || true",
-    "db:migrate": "npm run db:migrate --workspace=server",
-    "db:seed": "npm run db:seed --workspace=server",
-    "dev": "concurrently -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm:dev:*\"",
-    "dev:client": "npm run dev --workspace=client",
-    "dev:server": "npm run dev --workspace=server",
-    "lint": "lint-staged",
-    "test": "npm run test --workspaces --if-present",
-    "clean": "cross-env-shell \"rm -rf ./client/node_modules ./server/node_modules ./node_modules ./package-lock.json\""
-  },
-  "keywords": [],
-  "author": "WildCodeSchool",
-  "license": "MIT",
-  "devDependencies": {
-    "@commitlint/cli": "^19.2.2",
-    "@commitlint/config-conventional": "^19.2.2",
-    "concurrently": "^8.2.2",
-    "cross-env": "^7.0.3",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
-    "validate-branch-name": "^1.3.0"
-  },
   "dependencies": {
-    "axios": "^1.7.2",
-    "bootstrap": "^5.3.3",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "mysql2": "^3.10.1",
-    "prop-types": "^15.8.1"
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^5.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.2",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
