@@ -10,6 +10,7 @@ function Navbar() {
     const menuItems = [
         { to: "/", label: "Accueil" },
         { to: "/about", label: "A Propos" },
+        { to: "/login", label: "connexion" },
     ];
 
     // défini la choix actif et affiche le label du menu
