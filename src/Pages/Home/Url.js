@@ -1,1 +1,0 @@
-export const Url = "Datas/Data.json"
